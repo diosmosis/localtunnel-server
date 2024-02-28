@@ -29,6 +29,7 @@ export default function(opt) {
     const router = new Router();
 
     router.get('/api/status', async (ctx, next) => {
+        console.log('here2');
         const stats = manager.stats;
         ctx.body = {
             tunnels: stats.tunnels,
@@ -55,6 +56,7 @@ export default function(opt) {
 
     // root endpoint
     app.use(async (ctx, next) => {
+        console.log('here');
         const path = ctx.request.path;
 
         // skip anything not on the root path
