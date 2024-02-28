@@ -29,7 +29,7 @@
   },
   "scripts": {
     "test": "mocha --check-leaks --require esm './**/*.test.js'",
-    "start": "./bin/server --port 3000 --secure",
+    "start": "./bin/server --port 3000 --secure --address 127.0.0.1",
     "dev": "node-dev bin/server --port 3000"
   }
 }
